@@ -1,0 +1,103 @@
+Node js - Run time environment to run any javascript
+
+How to add file path globally to your system
+
+/user/local/bin
+echo $PATH     
+
+Open terminal 
+open -e .bash_profile
+export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
+
+Save it
+Run source ~/.bash_profile
+
+Exit and open terminal
+
+For windows
+C drive, program file, nojdejs get the file path
+Go to system environment properties
+Environment variables
+New button
+Variable name - NODE_HOME
+Valuable value = file path
+
+Package.json - it is a json file that exist at the root of your project, manage your project dependencies. 
+
+
+"cypress": "^13.6.6"
+
+npm - node package manager - where you find all dependencies 
+
+
+Terminal:  mkdir CypressAutomation
+Cd CpyressAutomation
+//to install package.json
+npm -i init
+Hit enter
+Enter
+Enter
+hit enter multiple times
+By default it will create package.json file
+
+
+Go to terminal
+npm install cypress - -save-dev   it will install cypress in package.json
+
+create inetgration folder, then exmaples folder then create a file test1.js
+
+What is cypress test runner
+node_modules/.bin/cypress open     it will open cypress dashboard  
+
+
+Select e2e project
+Click continue
+Select browser   it will open cypress runner
+
+
+Go to cypress.config.js and give path to your project where your specs are present
+
+specPattern: ‘cypress/integration/examples/*.js’
+
+https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
+
+Standard testing framework Jasmine or Mocha, need to choose one we will one Mocha
+Testing framework like Junit and TestNG
+
+Navigating to URL https://rahulshettyacademy.com/seleniumPractise/#/
+
+
+Through command line, cypress runs in headless mode in electron 
+node_modules/.bin/cypress run
+
+To run specific spec
+node_modules/.bin/cypress run —spec “use  your own fiel file path”
+
+Visible mode —headed mode
+node_modules/.bin/cypress run —headed 
+
+
+If you want to execute specific browser
+node_modules/.bin/cypress run —headed chrome
+node_modules/.bin/cypress run —headed firefox
+
+
+To craete a selector, you need Tagname, attriubte name and attribute value
+
+
+Cypress only support css selectors/locators
+Id = #idname
+Class = .classname .search-keyword
+	tag.classname  = input.search-keyword
+Tag name attribute and its value
+input[type=‘search’]
+form input
+
+
+Cypress is asynchronus in nature and there is no guarantee in sequence of execution,
+but cypress takes care of it
+
+Ever asynchronus step written a Promise, promise comes with rejection, resolved
+planning
+
+.then()
