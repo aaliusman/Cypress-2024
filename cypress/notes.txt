@@ -1,3 +1,7 @@
+cypress api webpage (need any help with Cypress command go to below link)
+https://docs.cypress.io/api/table-of-contents
+
+
 Node js - Run time environment to run any javascript
 
 How to add file path globally to your system
@@ -90,14 +94,34 @@ Id = #idname
 Class = .classname .search-keyword
 	tag.classname  = input.search-keyword
 Tag name attribute and its value
-input[type=‘search’]
+input[type='search']
 form input
 
+asynchronus = doesn't go in sequence or line by line
+synchronus = it goes line by line, in sequence
 
 Cypress is asynchronus in nature and there is no guarantee in sequence of execution,
-but cypress takes care of it
+but cypress takes care of it 99% of time
+
 
 Ever asynchronus step written a Promise, promise comes with rejection, resolved
 planning
 
 .then()
+
+Alias - if you want to avoid using same elment again and again, we can use
+alias like cy.get('.products').as('prodLocator');
+
+static drodown also known as select
+dynamic dropdown keeps changing according to the value you engter
+
+
+An implicit wait is a setting applied globally to the WebDriver instance. 
+It tells the WebDriver to wait for a certain amount of time before throwing 
+a "No Such Element" exception. This wait is applied to all elements in the script.
+
+On the other hand, an explicit wait is used for a particular instance only. 
+It is more specific and allows you to set different wait times for different elements 
+in your script. Explicit waits are more flexible as they allow you to wait for certain
+ conditions (such as element visibility or clickability) before proceeding with the next 
+ steps in your script.
