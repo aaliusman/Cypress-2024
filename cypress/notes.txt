@@ -96,6 +96,11 @@ Class = .classname .search-keyword
 Tag name attribute and its value
 input[type='search']
 form input
+if you want to use specicic text of attribute value
+a[href*="about"]
+if you want to locate specific tag by using nth-child
+tr td:nth-child(2)
+.next() to locate siblings of elments
 
 asynchronus = doesn't go in sequence or line by line
 synchronus = it goes line by line, in sequence
@@ -125,3 +130,17 @@ It is more specific and allows you to set different wait times for different ele
 in your script. Explicit waits are more flexible as they allow you to wait for certain
  conditions (such as element visibility or clickability) before proceeding with the next 
  steps in your script.
+
+
+ Assertion - you have expectecd value and actual value
+ Expected value: comes from user story/acceptance criteria/ product owner
+ Actual value: comes from actual application/website
+
+ DOM - Document object model of html page, where you find all the elements of the page
+
+ The invoke command in Cypress is used to invoke a function on the subject
+  yielded from the previous command. It allows you to call a function on a DOM 
+  element or a custom command that returns a function. 
+
+  An iframe, short for inline frame, is an HTML element that allows you to
+  embed another document within the current HTML document.
