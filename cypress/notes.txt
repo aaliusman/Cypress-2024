@@ -74,12 +74,13 @@ Navigating to URL https://rahulshettyacademy.com/seleniumPractise/#/
 Through command line, cypress runs in headless mode in electron 
 node_modules/.bin/cypress run
 
+
 To run specific spec
 node_modules/.bin/cypress run —spec “use  your own fiel file path”
+node_modules/.bin/cypress run --headed --spec 'cypress/integration/examples/test2.js'
 
 Visible mode —headed mode
 node_modules/.bin/cypress run —headed 
-
 
 If you want to execute specific browser
 node_modules/.bin/cypress run —headed chrome
@@ -144,3 +145,19 @@ in your script. Explicit waits are more flexible as they allow you to wait for c
 
   An iframe, short for inline frame, is an HTML element that allows you to
   embed another document within the current HTML document.
+
+
+  Cypress framework
+  Setting up test hooks
+  Data Driven testing with fixtures
+  Building Custom cypress commands
+  Parameterize test with Mulitple Data steps
+  Understand the test debugging
+  Build Page object Desing pattern for objects
+  Configuration changes in Cypress.json
+  Screenshots and video recording for Testing
+  Exploring cypress dashboard
+  Undersatnd the environmental vairalbes of cypress
+  Generate Excellent reports for Test execution results
+  Integrate Cypress tests with Jenkins CI
+  
