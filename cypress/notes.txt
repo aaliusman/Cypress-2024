@@ -34,6 +34,8 @@ Package.json - it is a json file that exist at the root of your project, manage 
 npm - node package manager - where you find all dependencies 
 
 
+assertions reference page: https://docs.cypress.io/guides/references/assertions
+
 Terminal:  mkdir CypressAutomation
 Cd CpyressAutomation
 //to install package.json
@@ -85,6 +87,8 @@ node_modules/.bin/cypress run —headed
 If you want to execute specific browser
 node_modules/.bin/cypress run —headed chrome
 node_modules/.bin/cypress run —headed firefox
+
+npx cypress run --spec cypress/integration/examples/test6Framework.js --headed --browser chrome --env url="https://rahulshettyacademy.com/" 
 
 
 To craete a selector, you need Tagname, attriubte name and attribute value
@@ -178,4 +182,10 @@ afterEach(() => {
 after(() => {
   // runs once all tests are done
 })
-  
+
+
+domain in a URL refers to the unique name that identifies a website,
+ such as "google.com" or "example.org". An endpoint, on the other hand, 
+ is a specific URL within a web service
+  domain - google.com
+  endpoint - google.com/search

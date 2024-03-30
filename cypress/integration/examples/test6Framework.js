@@ -6,10 +6,16 @@ import ProductsPage from "../pageObjects/ProductsPage";
 // Testing framewokr: Mocha
 // Chai: for assersion
 
+let num = 1
+let hum = 1
+
 describe('Cypress Framework', () => {
     // hooks
     before(function () {
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        // environmental variable domain and endpoint
+
+        // cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.visit(Cypress.env('url') + 'angularpractice/')
         // runs once before all tests in the block
         cy.fixture('example').then(function (data) {
             globalThis.data = data;
@@ -56,18 +62,47 @@ describe('Cypress Framework', () => {
         homePage.getEmployedRadioButton().should('be.enabled')
         homePage.getShopTab().click()
 
-        globalThis.data.productName.forEach(function(element){
+        globalThis.data.productName.forEach(function (element) {
             cy.selectProduct(element)
         })
+        // expect(parseInt(total)).to.equal(sum)
+
         productsPage.getCheckoutButton().click()
+        let sum = 0
+
+
+        cy.get('tr td:nth-child(4) strong').each(($el, index) => {
+            // cy.log($el.text())
+
+            //₹. 85000
+            const actualText = $el.text();
+            let price = actualText.split(" ")
+            // price[0] = ₹.
+            // price[1] = 85000
+            // trim will remove any space before and after
+            price[1].trim()
+            cy.log(price)
+            const actualPrice = Number(price[1])
+            sum = sum + actualPrice
+            expect(num).to.equal(hum)
+        }).then(function () {
+            cy.log(sum)
+        })
+        // cy.log(sum)
+        cy.get('h3 strong').then(function ($el) {
+            const amount = $el.text()
+            let res = amount.split(" ")
+            let total = res[1].trim()
+            expect(parseInt(total)).to.equal(sum)
+        })
         cy.get('.btn.btn-success').click()
         cy.get('#country').type('Pakistan')
         cy.get('.suggestions > ul > li > a').click()
         // cy.get('.suggestions > ul > li > a').click()
-        cy.get('.checkbox.checkbox-primary > input').click({force: true})
+        cy.get('.checkbox.checkbox-primary > input').click({ force: true })
         cy.get('input[type="submit"]').click()
         // cy.get('.alert').should('have.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).')
-        cy.get('.alert').then(function(element){
+        cy.get('.alert').then(function (element) {
             const actualText = element.text()
             expect(actualText.includes('Success')).to.be.true
         })
