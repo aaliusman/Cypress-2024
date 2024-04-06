@@ -189,3 +189,43 @@ domain in a URL refers to the unique name that identifies a website,
  is a specific URL within a web service
   domain - google.com
   endpoint - google.com/search
+
+
+  API Notes
+  There are four main type requst type: GET, POST, PUT, DELETE
+  APIs, the GET method is often used to retrieve information from a specified resource.
+   For example, when you enter a website's URL into your web browser, 
+   your browser makes a GET request to the server to retrieve the web page.
+
+   APIs, the PUT method is often used to update the specified resource with the 
+   new data provided in the request.
+
+   APIs, the POST method is often used when you want to add a new record to a database,
+   submit a form, or send data to the server for processing. 
+
+   APIs, the DELETE method is often used to remove a resource from the server
+
+  #2) 200 Series
+The client accepts the Request, being processed successfully at the server.
+200 – OK
+201 – Created
+202 – Accepted
+203 – Non-Authoritative Information
+204 – No Content
+205 – Reset Content
+
+#3) 300 Series
+Most of the codes related to this series are for URL Redirection.
+300 – Multiple Choices
+301 – Moved Permanently
+302 – Found
+303 – Check Other
+304 – Not Modified
+
+ #4) 400 Series
+These are specific to client-side error.
+400 – Bad Request
+401 – Unauthorised
+402 – Payment Required
+403 – Forbidden
+404 – Not Found

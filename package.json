@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/cypress",
+    "headedTest": "node_modules/.bin/cypress -- --headed",
+    "chromeTest": "node_modules/.bin/cypress -- --browser chrome",
+    "recordDashboardTest": "node_modules/.bin/cypress --record --key 66be4fcc-b983-4ccb-b6ba-f59da8154ad9"
+
   },
   "author": "",
   "license": "ISC",

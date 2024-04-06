@@ -1,5 +1,5 @@
 describe('Automation Practice Test Suite', () => {
-    it('Different type of elements on page test', () => {
+    it.skip('Different type of elements on page test', () => {
       const url = "https://rahulshettyacademy.com/AutomationPractice/"
       cy.visit(url)
 
@@ -23,7 +23,7 @@ describe('Automation Practice Test Suite', () => {
     })
 
     //how to handle child windows in cypress
-    it('How to handle mulitple tabs', () => {
+    it.skip('How to handle mulitple tabs', () => {
         const url = "https://rahulshettyacademy.com/AutomationPractice/"
         cy.visit(url)
         //how to handle child windows in cypress

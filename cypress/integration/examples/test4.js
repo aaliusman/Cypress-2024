@@ -1,7 +1,7 @@
 import 'cypress-iframe'
 
 describe('Automation Practice Test Suite', () => {
-    it('How to handle iframe', () => {
+    it.skip('How to handle iframe', () => {
       const url = "https://rahulshettyacademy.com/AutomationPractice/"
       cy.visit(url)
       //npm install -D cypress-iframe

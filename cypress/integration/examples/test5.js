@@ -5,7 +5,7 @@
 // Chai: for assersion
 
 describe('My First Test Suite', () => {
-    it.only('My seconds test case', () => {
+    it('My seconds test case', () => {
         const monthNumber = '8'
         const date = '14'
         const year = '2025'

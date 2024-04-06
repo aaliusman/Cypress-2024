@@ -11,7 +11,7 @@ describe('My First Test Suite', () => {
     expect(true).to.equal(true)
   })
 
-  it.only('My seconds test case', () => {
+  it.skip('My seconds test case', () => {
     const url = 'https://rahulshettyacademy.com/seleniumPractise/#/'
     cy.visit(url)
     cy.get('input.search-keyword').type('ca')
